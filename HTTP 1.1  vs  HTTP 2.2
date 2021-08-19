@@ -1,0 +1,16 @@
+HTTP/1.1:
+HTTP 1.1  keeps all requests and responses in plain text format
+It uses More than one TCP connection in order to avoid head of line blocking.
+In order to avoid buffer overflow when more amount of data transfer, HTTP1.1 uses flow control which is “relies on the underlying TCP connection”.
+This method using receive windows based on the underlying TCP connection can only implement flow control on either end of the connection.
+It use a technique called “resource inlining” to include the required resource directly within the HTML document that the server sends in response to the initial GET request. 
+In HTTP/1.1 header component of a message is always sent as plain text.
+
+HTTP/2:
+HTTP/2 uses the binary framing layer to encapsulate all messages in binary format, while still maintaining HTTP semantics
+It uses single TCP connection with multiple stream of data.
+It uses stream prioritization method or techniques to increase performance by giving weightage to stream between 0 to 256
+But in HTTP2 allowing the client and server to implement their “own flow controls”, rather than relying on the transport layer (TCP).
+This method controls data flow on the level of the application layer, the flow control mechanism does not have to wait for a signal to reach its ultimate destination before adjusting the receive window. 
+In HTTP 2 it uses server push and maintaining the separation between the pushed resource and the document. Server push is client control.
+In data compression HTTP/2 can split headers from their data, resulting in a header frame and a data frame.
