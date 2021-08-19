@@ -10,7 +10,7 @@ HTTP/2:
 HTTP/2 uses the binary framing layer to encapsulate all messages in binary format, while still maintaining HTTP semantics
 It uses single TCP connection with multiple stream of data.
 It uses stream prioritization method or techniques to increase performance by giving weightage to stream between 0 to 256
-But in HTTP2 allowing the client and server to implement their “own flow controls”, rather than relying on the transport layer (TCP).
+In HTTP2 allowing the client and server to implement their “own flow controls”, rather than relying on the transport layer (TCP).
 This method controls data flow on the level of the application layer, the flow control mechanism does not have to wait for a signal to reach its ultimate destination before adjusting the receive window. 
 In HTTP 2 it uses server push and maintaining the separation between the pushed resource and the document. Server push is client control.
 In data compression HTTP/2 can split headers from their data, resulting in a header frame and a data frame.
